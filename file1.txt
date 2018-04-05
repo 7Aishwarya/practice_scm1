@@ -1,0 +1,6 @@
+cd ..    //come one path backward, eg. if it is in c/documents then -> c/
+pwd      it tells us our current location
+touch     //create a file using git bash
+ls
+git init   //initialize empty repository
+git status   //red -> untracked files   these are in staging area

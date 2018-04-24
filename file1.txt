@@ -6,3 +6,7 @@ git init   //initialize empty repository
 git status   //red -> untracked files   these are in staging area
 git add      //help command see
 //change at line 8 in test branch
+git add .     //it => files are now staged and ready to be committed
+commit        //ready to be pushed 
+git remote add origin "link"
+git push -u origin master    // local repository -> linked with -> github repository

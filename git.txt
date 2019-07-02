@@ -1,0 +1,150 @@
+Git 
+Version Control
+Multiple users can work on a project at the same time
+
+
+git-scm.com
+
+git init
+git status
+[u see untracked files]
+u need to add and commit to the git repository so that official changes can be made and 
+developers can work when they add new features to the open source repository
+
+git add . 
+or 
+git add filename/filenames
+git status
+git commit -m "first commit"
+git status
+
+BRANCHING
+u want to make largechanges to your project...at the same time u want to ensure that 
+all your previos working code is safe so that even if u screw up something then u will be 
+able to revert back to the previous state 
+
+git branch test
+git branch
+git checkout test
+
+open your file make changes and save them(suppose u messed up everything)
+
+git add .
+git commit -m "second commit(in test branch)"
+git checkout master
+(the origibal code is still there)
+git checkout test
+the changes made to the test branch have not affected the original code in master branch)
+
+MERGING BRANCHES
+git checkout master
+git merge test
+git branch test -d (deletes the branch)
+git branch test -D 
+(for force-delete)
+
+
+make changes
+git add .
+git commit -m "changes made"
+Now to revert the changes
+git log
+copy the id
+git revert <paste id>
+press Ctrl+X
+
+Suppose u want to create a file that u don't want people on github to see it 
+create a new folder(secrets) inside your local repo and then create a new 
+file(codes.txt) inside it. Create one more file(passwords.txt)
+gitignore is used to hide files in your repository
+Create .gitignore file 
+
+-------------------------------------------------------------------------------------------------------------
+init — Create an empty GIT repository in your development directory
+
+Go to directory
+git init
+ 
+
+status — Show the current state of the repository including un-added and un-committed files
+
+git status
+ 
+
+add — Add a file to the repository staging area
+
+Create a file, e.g. file.txt
+git add file.txt
+Add all new or changed files to the repository staging area (the period means all)
+
+git add .
+ 
+
+commit — Commit all changes to the repository for first time (-m means message)
+
+git commit –m “Initial commit”
+Commit all changes to the repository for later activities
+
+git commit –m “Description of changes being made to project”
+ 
+
+branch — Create a new branch of the project
+
+Choose a name for the new branch (original branch is master), e.g. test
+git branch test
+List all branches (* appears next to current branch)
+
+git branch
+ 
+
+checkout — Switch branches and check-out all files (e.g. to test branch)
+
+git checkout test
+Create a new branch and check-out files in one command
+
+git checkout –b test
+ 
+
+merge — Merge two branches together (go to the destination branch first, e.g. master)
+
+git checkout master
+git merge test
+ 
+
+(delete) — Delete a branch that you no longer need (e.g. after a merge)
+
+git branch test –d
+Or to force the delete:
+
+git branch test –D
+ 
+
+log — View commit history (including long commit ID numbers)
+
+git log
+ 
+
+revert — Revert all files back to a previous commit point
+
+git revert <long commit ID from the log command>
+rm -cache
+
+Removes cache from a specific file so that it can be added to the .gitignore
+------------------------------------------------------------------------------------------------------
+
+git remote add origin link.git
+git push -u origin master
+(this uploads everything that u have inside of your local repo to the central repo)
+if u make some changes and want to reupload it to github then:
+git add .
+git commit -m "commit msg"
+git push -u origin master
+
+CLONE
+git clone link 
+
+
+
+
+
+

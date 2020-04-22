@@ -1,2 +1,3 @@
-Some basic git commands
-(practice SCM)
+#Some basic git commands
+**(practice SCM)**
+
